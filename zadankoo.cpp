@@ -4,19 +4,23 @@ using namespace std;
 
 int main()
 {
-    string a;  
-    ifstream plik2;
+    string t[1000];  
+    int licznik=0;
+    ifstream plik2; 
     plik2.open("c:\\a.txt");  
     if(plik2.good())  
+   
 	while(!plik2.eof())        
-                         {
-                         plik2>>a;  
-                         cout<<a;    
+                         { 
+			 t[licznik] = a; 
+                         plik2>>a;          
+                         cout << licznik++ << ":" << a;
                          cout<<endl;
                          }
     plik2.close();
    
-    cout<<endl;
+    for (int i=0; i<licznik; i++)
+    cout<< licznik << endl;
     system("PAUSE");
     return 0;
 }
