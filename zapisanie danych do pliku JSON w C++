@@ -1,0 +1,36 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+    ifstream wejsciee;
+    ofstream wyjsciee;
+    wejsciee.open("wejsciee.txt");
+    wyjsciee.open("wyjsciee.json");
+
+        int a =0;
+        int b [1000];
+        if (wejsciee.good()) 
+        {
+            wyjsciee<<"[";
+            while  (!wejsciee.eof()) 
+            {
+            wejsciee >> b[a++];
+            }
+            while (a!=-1) 
+            {
+                wyjsciee << " {  "liczba" : "" << b[a--]<<""}";
+                if(!wejsciee.eof()){
+                wyjsciee << ", ";
+                    }
+            }
+            wyjsciee<<"]";
+        }
+        system("PAUSE");
+        return 0;
+
+}
