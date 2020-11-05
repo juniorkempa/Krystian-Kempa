@@ -1,0 +1,30 @@
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main()
+{
+	int a;
+	int b;
+	
+	int zad1 = a||b;
+	int zad2 = a&&b;
+	int zad3 = a^b;
+	int zad4 = ~a;
+	int zad5 = ~b;
+	int zad6 = a<<=b;
+	int zad7 = a>>=b;
+	
+	
+	cin >>a;
+	cin >>b;
+	cout << "|: " << zad1 << ", Dwojkowy: " << bitset<8>(zad1).to_string() <<endl;
+	cout << "&: " << zad2 << ", Dwojkowy: " << bitset<8>(zad2).to_string() <<endl;
+	cout << "^: " << zad3 << ", Dwojkowy: " << bitset<8>(zad3).to_string() <<endl;
+	cout << "~a: " << zad4 << ", Dwojkowy: "<< bitset<8>(zad4).to_string() <<endl;
+	cout << "~b: " << zad5 << ", Dwojkowy: "<< bitset<8>(zad5).to_string() <<endl;
+	cout << "a<<=b: " << zad6 << ", Dwojkowy: "<< bitset<8>(zad6).to_string() <<endl;
+	cout << "a>>=b: " << zad7 << ", Dwojkowy: "<< bitset<8>(zad7).to_string() <<endl;
+	return 0;
+}
