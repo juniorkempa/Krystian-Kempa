@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+using namespace std;
+int zerujBit(int liczba, int nrBitu) {
+    return ((~(0b1 << nrBitu)) & liczba);
+}
+
+
+int main()
+{
+    ifstream file;
+    ofstream file2;
+    file.open("a.txt");
+    file2.open("b.txt");
+    int liczba1,liczba2;
+    if (file.good())
+    {
+        while (!file.eof()) {
+            file >> liczba1 >> liczba2;
+            file2 << zerujBit(liczba1, liczba2)<<endl;
+            cout << zerujBit(liczba1, liczba2)<<endl;
+        }  
+    }
+
+    file.close();
+    file2.close();
+    
+
+    return 0;
+}
